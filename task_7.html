@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    TASK 7: Using Python or PHP or Java or Ruby or JavaScript
+    <!-- Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct
+    grade:
+    A > 79 , B - 60 to 79, C > 49 to 59, D - 40 to 49, E - less 40
+    Once you learn functions,revisit this and write this code inside a function. -->
+
+    <script>
+        marks = prompt("Enter student marks (0-100): ")
+        marks = parseInt(marks)
+
+        if (marks > 79) {
+            console.log("A")
+        } else if (marks > 60) {
+            console.log("B")
+        } else if (marks > 49) {
+            console.log("C")
+        } else if (marks > 40) {
+            console.log("D")
+        } else {
+            console.log("E")
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

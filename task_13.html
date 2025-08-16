@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    TASK 13: Using Python or PHP or Java or Ruby or JavaScript or C# or Go
+    <!-- Write a program that takes the email and password as input from a user and checks if they are equal to
+    “admin@mail.com” and password is “Admin@123” , if so then print “Login is Successful” and if not print “Invalid
+    username or password”. ONLY accept 3 tries after which it notifies you that you have been blocked.
+    Once you learn functions,revisit this and write this code inside a function. -->
+
+    <script>
+        email="admin@mail.com"
+        password="Admin@123"
+        trials=0
+
+        while (trials < 3) {
+            userEmail = prompt("Enter your email: ")
+            userPassword = prompt("Enter your password: ")
+
+            if (userEmail === email && userPassword === password) {
+                console.log("Login is Successful")
+                break
+            } else {
+                console.log("Invalid username or password")
+                trials++
+            }
+
+            if (trials === 3) {
+                console.log("You have been blocked")
+            }
+        }
+        
+    </script>
+
+
+</body>
+
+</html>

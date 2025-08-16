@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    TASK 5: Using Python or PHP or Java or Ruby or JavaScript
+    <!-- Implement a program that takes 3 users inputs from the terminal or the Browser, and stores them in three variables.
+    Return the largest of the three. Do this without using the the inbuilt max () function! -->
+
+    <script>
+        digit1 = prompt("Enter first digit: ")
+        digit1 = parseInt(digit1)
+        digit2 = prompt("Enter second digit: ")
+        digit2 = parseInt(digit2)
+        digit3 = prompt("Enter third digit: ")
+        digit3 = parseInt(digit3)
+
+        if (digit1 > digit2 && digit1 > digit3) {
+            console.log("Largest digit is: " + digit1)
+        } else if (digit2 > digit1 && digit2 > digit3) {
+            console.log("Largest digit is: " + digit2)
+        } else {
+            console.log("Largest digit is: " + digit3)
+        }
+    </script>
+
+</body>
+
+</html>
