@@ -17,9 +17,31 @@
     Once you learn functions,revisit this and write this code inside a function. -->
 
     <script>
-        speed=prompt("Enter Speed: ")
-        speed=parseInt(speed)
-        speed_limit=70
+        function check_speed(speed){
+            const speed_limit=70
+
+            if (speed <= speed_limit){
+                console.log("Ok");
+            } else{
+                let speed_exceeded = speed - speed_limit
+                let points = Math.floor((speed_exceeded / 5)) + 1
+                result = `Points: ${points}`;
+                if (points > 12){
+                    result = "License suspended";
+                }else{
+                    result = `Demerit Points: ${points}`;
+                }
+                return result;
+            }
+            
+        }
+
+
+        let speed_input=prompt("Enter Speed: ")
+        speed_input=parseInt(speed_input)
+        
+        let func_speed = check_speed(speed_input)
+        console.log(func_speed)
     </script>
 
 </body>

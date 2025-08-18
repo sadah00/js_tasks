@@ -21,12 +21,28 @@
     Once you learn functions,revisit this and write this code inside a function. -->
 
     <script>
-        stars=prompt("Enter number of rows: ")
-        stars=parseInt(stars)
+        // stars=prompt("Enter number of rows: ")
+        // stars=parseInt(stars)
 
-        for (let i = 0; i < stars; i++) {
-            console.log("*".repeat(i + 1))
+        // for (let i = 0; i < stars; i++) {
+        //     console.log("*".repeat(i + 1))
+        // }
+
+
+        function stars(num){
+            
+            for (let i = 1; i <= num; i++) {
+                let row = ""
+                for (let j = 1; j <= i; j++) {
+                    row += "*"
+                }
+                console.log(row)
+            }
         }
+
+        let stars_no = parseInt(prompt("Enter number of stars: "))
+        stars(stars_no)
+        
     </script>
 
 </body>

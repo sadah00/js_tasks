@@ -28,9 +28,13 @@
         total = 0
 
         for (let i = 0; i < prods.length; i++) {
+            let stock = parseInt(prods[i][2]) // Get the last element which is the stock
+            total += stock // Add to total
+            console.log(`Product: ${prods[i][0]}, Stock: ${stock}`) // Print product and stock
         
         }
     
+        
     </script>
 
 

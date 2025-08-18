@@ -15,7 +15,54 @@
  -->
 
     <script>
+        let birth_date = prompt("Enter your date of birth in the format: YYYY-MM-DD")
 
+        //2006-2-25
+        //2025-8-18
+
+        function get_birthday(birth_date) {
+            let birthdate_parts = birth_date.split('-')
+            console.log(birthdate_parts)
+            //['2006', '9', '25']
+            let birth_year = parseInt(birthdate_parts[0])
+            let birth_month = parseInt(birthdate_parts[1])
+            let birth_day = parseInt(birthdate_parts[2])
+
+            let todayDate = 18
+            let todayMonth = 8
+            let todayYear = 2025
+
+            let monthDays = [31, 30, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+// where date is smaller than todaydate
+            if (todayDate < birth_day) {
+                todayMonth--
+                todayDate += monthDays[(todayMonth - 1 + 12) % 12]
+            }
+            let calculated_day = todayDate - birth_day
+            let calculated_month;
+            let calculated_year
+
+            // where month is larger than todaymonth
+            if (birth_month > todayMonth) {
+                calculated = 12 - (birth_month - todayMonth)
+                calculated_year = todayYear - birth_year - 1
+            }
+            else {
+                calculated_month = todayMonth - birth_month
+                calculated_year = todayYear - birth_year
+            }
+
+            return {
+                "calculated_year": calculated_year, "calculated_month": calculated_month,
+                "calculated_days": calculated_day
+            }
+
+
+        }
+
+        let age = get_birthday(birth_date)
+
+        console.log(`Age: ${age.calculated_year} years, ${age.calculated_month} months, ${age.calculated_days} days`)
     </script>
 
 
