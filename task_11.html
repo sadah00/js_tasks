@@ -39,12 +39,12 @@
                 todayDate += monthDays[(todayMonth - 1 + 12) % 12]
             }
             let calculated_day = todayDate - birth_day
-            let calculated_month;
-            let calculated_year
+            // let calculated_month = todayMonth - birth_month
+            // let calculated_year = todayYear - birth_year
 
             // where month is larger than todaymonth
             if (birth_month > todayMonth) {
-                calculated = 12 - (birth_month - todayMonth)
+                calculated_month = 12 - (birth_month - todayMonth)
                 calculated_year = todayYear - birth_year - 1
             }
             else {
